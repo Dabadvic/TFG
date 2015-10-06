@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proyecto</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<h1 style="text-align:center">Aplicación para la extración de reglas descriptivas</h1>
+	<table style="width:100%;text-align:center">
+		<tr>
+			<td>Inicio</td>
+			<td>Consultas</td>
+			<td>Nueva consulta</td>
+			<td>Usuario</td>
+			<td>Log in/out</td>
+		</tr>
+	</table>
+
+<%= yield %>
+
+</body>
+</html>
