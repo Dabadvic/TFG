@@ -1,9 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Colores predefinidos - Deep Purple material design Google */
+$color-fondo-oscuro:	#311B92; /* 900 */
+$color-fondo: 			#673AB7; /* 500 */
+$color-fondo-claro: 	#9575CD; /* 300 */
 
 /* universal */
-
 
 body {
 	padding-top: 60px;
@@ -74,16 +77,8 @@ p {
 	text-decoration: none;
 }
 
-#titulo {
-	font-size: 3em;
-	letter-spacing: -2px;
-	margin-bottom: 30px;
-	text-align: center;
-	color: #fff;
-}
-
 #cabecera {
-	background-color: #3F51B5;
+	background-color: $color-fondo; 
 	padding-right: 0px;
 	padding-left: 0px;
 }
@@ -124,20 +119,45 @@ table.menu {
     			text-decoration:none;
     		}
     		&:hover {
-    			background-color: #7986CB;
+    			background-color: $color-fondo-claro #7986CB; 
     		}
 		}
 	}
 }
 
 td.selected {
-	background-color: #1A237E; 
+	background-color: $color-fondo-oscuro; 
+}
+
+#titulo {
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	text-align: center;
+	color: #fff;
+}
+
+#title-container {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	transition: margin 2s, height 2s;
+}
+
+header {
+	transition: min-height 2s;
 }
 
 header.shrink {
 	min-height: 30px;
 	h1 {
-		display: none;
+		/* display: none; */
+		 visibility: hidden; 
+	}
+
+	#title-container {
+		height: 0px;
+		margin: 0px;
 	}
 }
 

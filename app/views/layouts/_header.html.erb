@@ -1,6 +1,8 @@
 <header class="navbar navbar-fixed-top navbar-inverse" id="cabecera">
 	<div class="">
-		<h1 id="titulo">Aplicación para la extración de reglas descriptivas</h1>
+		<div id="title-container">
+			<h1 id="titulo">Aplicación para la extración de reglas descriptivas</h1>
+		</div>
 		<table class="menu">
 			<tr>
 				<%= content_tag :td, :class => (yield(:title) == "Home")? "selected" : "" do %>
