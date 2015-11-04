@@ -13,4 +13,4 @@
 /tmp
 
 # Ignore test databases
-/db/development.sqlite3
+db/development.sqlite3
