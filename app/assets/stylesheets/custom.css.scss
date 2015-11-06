@@ -158,11 +158,11 @@ td.selected {
 #title-container {
 	margin-top: 20px;
 	margin-bottom: 30px;
-	transition: margin 2s, height 2s;
+	transition: margin 1s, height 1s;
 }
 
 header {
-	transition: min-height 2s;
+	transition: min-height 1s;
 }
 
 header.shrink {
