@@ -22,10 +22,16 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy'
 
+  get 'queries' => 'queries#list'
+
+  get 'new_query' => 'queries#new'
+
   resources :users
 
   resources :account_activations, only: [:edit]
 
   resources :password_resets, only: [:new, :create, :edit, :update]
+
+  resources :queries, only: [:show, :create, :destroy]
 
 end

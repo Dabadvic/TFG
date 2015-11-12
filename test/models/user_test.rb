@@ -63,4 +63,12 @@ class UserTest < ActiveSupport::TestCase
 		assert_not @user.authenticated?(:remember, '')
 	end
 
+	test "associated queries should be destroyed" do 
+		@user.save
+		@user.queries.create!(description: "Lorem ipsum")
+		assert_difference 'Query.count', -1 do 
+			@user.destroy
+		end
+	end
+
 end

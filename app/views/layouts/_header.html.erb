@@ -9,8 +9,14 @@
 				  <%= link_to "Inicio", root_path %>
 				<% end %>
 
-				<td><%= link_to "Consultas", "#" %></td>
-				<td><%= link_to "Nueva consulta", "#" %></td>
+				<%= content_tag :td, :class => (params[:action] == "list")? "selected" : "" do %>
+				  <%= link_to "Consultas", queries_path %>
+				<% end %>
+
+				<%= content_tag :td, :class => ((params[:action] == "new")&&
+												(params[:controller] == "queries"))? "selected" : "" do %>
+				  <%= link_to "Nueva consulta", new_query_path %>
+				<% end %>
 
 				<% if logged_in? %>
 
