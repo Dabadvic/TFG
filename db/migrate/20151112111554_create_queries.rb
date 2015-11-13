@@ -6,7 +6,7 @@ class CreateQueries < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_foreign_key :queries, :users
+    # add_foreign_key :queries, :users
     add_index :queries, [:user_id, :created_at]
   end
 end
