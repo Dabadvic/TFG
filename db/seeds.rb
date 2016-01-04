@@ -13,6 +13,13 @@ User.create!(name: "Example User",
 			 activated: true,
 			 activated_at: Time.zone.now)
 
+User.create!(name: "Usuario Ejemplo",
+			 email: "usuario@ejemplo.org",
+			 password: "usuario",
+			 password_confirmation: "usuario",
+			 activated: true,
+			 activated_at: Time.zone.now)
+
 User.create!(name: "David Abad",
 			 email: "davidabad10@gmail.com",
 			 password: "davidabad",
